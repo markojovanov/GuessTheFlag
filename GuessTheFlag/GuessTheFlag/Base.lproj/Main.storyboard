@@ -19,14 +19,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyy-O1-Vct">
                                 <rect key="frame" x="107" y="108" width="200" height="100"/>
                                 <state key="normal" image="france"/>
+                                <connections>
+                                    <action selector="flagClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbY-bF-RyM"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-F1-QmU">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-F1-QmU">
                                 <rect key="frame" x="107" y="238" width="200" height="100"/>
                                 <state key="normal" image="france"/>
+                                <connections>
+                                    <action selector="flagClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="apu-0h-ICv"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtc-qH-fDn">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtc-qH-fDn">
                                 <rect key="frame" x="107" y="368" width="200" height="100"/>
                                 <state key="normal" image="france"/>
+                                <connections>
+                                    <action selector="flagClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="onh-HX-fRy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

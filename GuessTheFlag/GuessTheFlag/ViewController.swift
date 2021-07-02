@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var numberOfQuestions = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
@@ -34,24 +35,48 @@ class ViewController: UIViewController {
     func askQuestion(action: UIAlertAction!){
         countries.shuffle()
         correctAnswer=Int.random(in: 0...2)
-        title=countries[correctAnswer].uppercased()
+        title="\(countries[correctAnswer].uppercased()) | Score:\(score)"
         flag1.setImage(UIImage(named: countries[0]), for: .normal)
         flag2.setImage(UIImage(named: countries[1]), for: .normal)
         flag3.setImage(UIImage(named: countries[2]), for: .normal)
     }
     @IBAction func flagClicked(_ sender: UIButton) {
-        var title: String
+        var titleAlert: String
+        let correctCountry: String = countries[sender.tag]
+        print(correctCountry)
+        print(title?.components(separatedBy: " ").first ?? 0)
         if sender.tag == correctAnswer{
-            title="Correct"
+            titleAlert="Correct"
             score+=1
         }
         else {
-            title="Wrong"
+            titleAlert="Wrong"
+            if score > 0 {
             score-=1
+            }
         }
-        let ac = UIAlertController(title: "Continue", message: "Your score is \(score)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: title, style: .default, handler: askQuestion))
-        present(ac, animated: true)
+        numberOfQuestions += 1
+        if numberOfQuestions == 9 {
+            let mac = UIAlertController(title: "Final Score", message: "Your score is \(score)", preferredStyle: .alert)
+            mac.addAction(UIAlertAction(title: "New Game", style: .default))
+            present(mac, animated: true)
+        }
+        else {
+            if titleAlert == "Wrong"{
+                let ac = UIAlertController(title: titleAlert, message: """
+                        You picked the flag of \(correctCountry.uppercased()), but the right answer is \(title?.components(separatedBy: " ").first ?? "").
+
+                    Your score is \(score)
+                """, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+                present(ac, animated: true)
+            }
+            else {
+                let ac = UIAlertController(title: titleAlert, message: "Your score is \(score)", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+                present(ac, animated: true)
+            }
+        }
     }
     
 

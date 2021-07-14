@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyy-O1-Vct">
                                 <rect key="frame" x="107" y="108" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vyy-O1-Vct" secondAttribute="height" multiplier="2:1" id="VcS-CX-Ypc"/>
+                                </constraints>
                                 <state key="normal" image="france"/>
                                 <connections>
                                     <action selector="flagClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbY-bF-RyM"/>
@@ -25,6 +28,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-F1-QmU">
                                 <rect key="frame" x="107" y="238" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Ri-F1-QmU" secondAttribute="height" multiplier="2:1" id="fV9-D3-s7D"/>
+                                </constraints>
                                 <state key="normal" image="france"/>
                                 <connections>
                                     <action selector="flagClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="apu-0h-ICv"/>
@@ -32,6 +38,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtc-qH-fDn">
                                 <rect key="frame" x="107" y="368" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dtc-qH-fDn" secondAttribute="height" multiplier="2:1" id="Cfk-YK-ReS"/>
+                                </constraints>
                                 <state key="normal" image="france"/>
                                 <connections>
                                     <action selector="flagClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="onh-HX-fRy"/>
@@ -43,7 +52,10 @@
                         <constraints>
                             <constraint firstItem="dtc-qH-fDn" firstAttribute="centerX" secondItem="2Ri-F1-QmU" secondAttribute="centerX" id="7N3-sX-az6"/>
                             <constraint firstItem="2Ri-F1-QmU" firstAttribute="top" secondItem="vyy-O1-Vct" secondAttribute="bottom" constant="30" id="Hm6-R2-xBK"/>
+                            <constraint firstItem="dtc-qH-fDn" firstAttribute="height" secondItem="2Ri-F1-QmU" secondAttribute="height" id="Lxc-Dz-Aej"/>
                             <constraint firstItem="vyy-O1-Vct" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bES-Gv-RcG"/>
+                            <constraint firstItem="2Ri-F1-QmU" firstAttribute="height" secondItem="vyy-O1-Vct" secondAttribute="height" id="dEi-gh-k1b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dtc-qH-fDn" secondAttribute="bottom" constant="20" id="joi-72-Mds"/>
                             <constraint firstItem="dtc-qH-fDn" firstAttribute="top" secondItem="2Ri-F1-QmU" secondAttribute="bottom" constant="30" id="sGM-Oa-jnA"/>
                             <constraint firstItem="vyy-O1-Vct" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wuL-lb-rJL"/>
                             <constraint firstItem="2Ri-F1-QmU" firstAttribute="centerX" secondItem="vyy-O1-Vct" secondAttribute="centerX" id="yrP-OC-Tgu"/>

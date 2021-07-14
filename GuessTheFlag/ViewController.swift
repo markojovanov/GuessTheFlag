@@ -56,10 +56,12 @@ class ViewController: UIViewController {
             }
         }
         numberOfQuestions += 1
-        if numberOfQuestions == 9 {
+        if numberOfQuestions % 10 ==  9 {
             let mac = UIAlertController(title: "Final Score", message: "Your score is \(score)", preferredStyle: .alert)
             mac.addAction(UIAlertAction(title: "New Game", style: .default))
             present(mac, animated: true)
+            score=0
+            title="\(countries[correctAnswer].uppercased()) | Score:\(score)"
         }
         else {
             if titleAlert == "Wrong"{
